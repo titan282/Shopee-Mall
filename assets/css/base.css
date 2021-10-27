@@ -1,0 +1,116 @@
+:root{
+    --white-color:#fff;
+    --text-color:rgba(0,0,0,.8);
+    --brand-primary-color: #d0011b;
+    --primary-color: #ee4d2d;
+    --header-height: 120px;
+}
+
+*{
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    font-size: 1.4rem;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.separate{
+    border-left: 2px solid rgba(255, 255, 255,0.3);
+}
+.icon{
+    font-size: 1.6rem;
+}
+.text-default{
+    cursor: auto !important;
+    opacity: 1 !important;
+}
+.logo-separator {
+    height: 3rem;
+    border-right: 1px solid hsla(0,0%,100%,.4);
+}
+p{
+    margin:0px;
+}
+ul{
+    padding: 0;
+    margin: 0;
+}
+.btn{
+    width:90px;
+    height: 100%;
+    outline: none;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+.btn--active{
+    background-color: var(--brand-primary-color);
+    color:#fff;
+}
+.btn--unselect{
+    background-color: #f5f5f5;
+    color: rgba(0,0,0,.4);
+}
+.btn + .btn{
+    margin-left: 10px;
+}
+.btn--pagination{
+    width:40px;
+    height: 30px;
+    font-size: 2rem;
+    margin: 0px 15px;
+}
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0 60px;
+}
+.pagination__direction{
+    font-size: 1.6rem;
+    padding: 0 16px;
+    cursor: pointer;
+    color: rgba(0,0,0,.4);
+    height: 30px;
+    line-height: 30px;
+}
+button + button{
+    margin: 0;
+}
+@keyframes OpenSubWindow {
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(100%);
+    }
+}
+@keyframes CloseSubWindow {
+    from{
+        opacity: 1;
+        transform: scale(100%);
+    }
+    to{
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+@keyframes OpenSubWindowOpacity {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

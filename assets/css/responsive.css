@@ -1,0 +1,193 @@
+/* PC */
+@media (min-width:1024px) {
+    .hide-on-pc{
+        display: none;
+    }
+}
+/* PC&Tablet */
+@media (min-width:740px) {
+    .hide-on-tablet-pc{
+        display: none;
+    }
+}
+/* Mobile & Tablet */
+@media (max-width:1023px) {
+    :root{
+        --header-height:72px;
+    }
+    .header{
+        height: var(--header-height);
+    }
+    .hide-on-mobile-tablet{
+        display: none;
+    }
+    .page-controller-mobile{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+    .page-controller-mobile__option{
+        list-style: none;
+        cursor: pointer;
+        width: 100%;
+        text-align: center;
+        padding: 1.4rem 0;
+        font-size: 1.5rem;
+        position: relative;
+    }
+    .page-controller-mobile__option::before{
+        content:'' ;
+        display: block;
+        position: absolute;
+        height: 60%;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        border-left: 1px solid rgba(0,0,0,0.1);
+    }
+    .mobile-category__list{
+        display: flex;
+        list-style: none;
+        overflow-x: scroll;
+        align-items: center;
+    }
+    .container__grid{
+        padding: 0;
+    }
+    .mobile-category{
+        margin-top: 10px;
+    }
+    .mobile-category__item{
+        flex-shrink: 0;
+        /* display: block; */
+        height: 40px;
+        width: 108px;
+        border-radius: 5px;
+        margin-left: 10px;
+        text-align: center;
+        color: rgba(255,255,255,1);
+        font-weight: 300;
+        line-height: 2rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
+    }
+    .mobile-category__item:nth-of-type(3n+1){
+        background-color: #87afd8;
+    }
+    .mobile-category__item:nth-of-type(3n+2){
+        background-color: #76c9bd;
+    }
+    .mobile-category__item:nth-of-type(3n+3){
+        background-color: #88cf81;
+    }
+}
+/* Tablet */
+@media (min-width:740px) and (max-width:1023px) {
+    .hide-on-tablet{
+        display: none;
+    }
+
+}
+/* Mobile */
+@media (max-width:739px) {
+    .hide-on-mobile{
+        display: none;
+    }
+    .header-search{}
+    .menu-bar__icon{
+        color: #fff;
+        font-size: 2.2rem;
+        padding: 8px;
+        margin: 0 12px;
+    }
+    #mobile-search-checkbox{
+        display: none;
+    }
+    .container{
+        overflow: hidden;
+    }
+    .sidebar{
+        position: fixed;
+        display: none;
+        z-index: 11;
+        top: 0;
+        bottom: 0;
+        width: 60%;
+    }
+    .sidebar-filter{
+        padding: 0;
+    }
+    .sidebar-portrait{
+        display: none;
+    }
+    .sidebar-collection__item{
+        padding: 15px 20px;
+
+    }
+    .sidebar-collection__item:hover{
+        padding-left: 23px;
+        transition: padding-left 0.2s;
+        color: var(--brand-primary-color);
+    }
+    .overlay{
+        position: fixed;
+        display: none;
+        z-index: 10;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.1);
+    }
+    #mobile-category-checkbox{
+        display: none;
+    }
+    #mobile-category-checkbox:checked~.overlay{
+        display: block;
+    }
+    .mobile-search{
+        position: absolute;
+        margin-left: 50px;
+    }
+    .mobile-search__icon{
+        color: #fff;
+        font-size: 2rem;
+        padding: 8px;
+        cursor: pointer;
+        margin: 0 12px;
+    }
+    .shopee-icon{
+        padding: 0;
+    }
+    .header-search{
+        position: relative;
+    }
+    .search-bar{
+        position: absolute;
+        top:calc(var(--header-height) - 40px);
+        right:0;
+        left: 0;
+        display: none;
+        z-index:1 ;
+        max-width: 100%;
+    }
+    #mobile-search-checkbox:checked~.search-bar{
+        display: flex;
+        top: var(--header-height);
+        transition: top 1s;
+        will-change: top;
+    }
+    .search-bar-input__input{
+        min-width: 0;
+        width: 100%;
+        min-width: 145px;
+    }
+    .search-bar__selector-text{
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
